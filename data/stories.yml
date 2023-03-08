@@ -1,0 +1,59 @@
+version: "3.0"
+stories:
+  - story: say greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+  - story: say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+  - story: check_mutations
+    steps:
+      - intent: check_mutations
+      - action: check_sampleid_genesymbol_form
+      - active_loop: check_sampleid_genesymbol_form
+      - active_loop: null
+      - action: action_check_mutations
+  - story: check_more_mutations
+    steps:
+      - intent: check_more_mutations
+      - action: check_sampleid_genesymbol_form
+      - active_loop: check_sampleid_genesymbol_form
+      - active_loop: null
+      - action: action_check_more_mutations
+  - story: check_lung_low_mutations
+    steps:
+      - intent: check_lung_low_mutations
+      - action: check_sampleid_form
+      - active_loop: check_sampleid_form
+      - active_loop: null
+      - action: action_check_lung_low_mutations
+  - story: check_contamination_data
+    steps:
+      - intent: check_contamination_data
+      - action: check_sampleid_form
+      - active_loop: check_sampleid_form
+      - active_loop: null
+      - action: action_check_contamination_data
+  - story: check_lung_hot_mutations
+    steps:
+      - intent: check_lung_hot_mutations
+      - action: check_sampleid_form
+      - active_loop: check_sampleid_form
+      - active_loop: null
+      - action: action_check_lung_hot_mutations
+  - story: check_msi_result
+    steps:
+      - intent: check_msi_result
+      - action: check_sampleid_form
+      - active_loop: check_sampleid_form
+      - active_loop: null
+      - action: action_check_msi_result
+  - story: check_tmb_result
+    steps:
+      - intent: check_tmb_result
+      - action: check_sampleid_form
+      - active_loop: check_sampleid_form
+      - active_loop: null
+      - action: action_check_tmb_result

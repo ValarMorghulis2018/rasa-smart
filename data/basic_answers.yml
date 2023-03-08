@@ -1,0 +1,29 @@
+version: "3.0"
+nlu:
+  - intent: affirm
+    examples: |
+      - 是
+      - 是的
+      - 没问题
+      - 好
+      - 好的
+      - 可以
+      - 挺好
+      - 没错
+      - 继续
+      - 没毛病
+  - intent: deny
+    examples: |
+      - 不
+      - 不行
+      - 没
+      - no
+      - 不可以
+      - 算了
+      - 不要
+      - 不要了
+      - 没有
+  - intent: stop
+    examples: |
+      - 停
+      - 停止

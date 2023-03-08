@@ -1,0 +1,64 @@
+# beautiful config
+# recipe: default.v1
+
+# language: zh
+# pipeline:
+# - name: SpacyNLP
+#   model: zh_core_web_sm
+# - name: SpacyTokenizer
+# - name: LanguageModelFeaturizer
+#   model_name: bert
+#   model_weights: bert-base-chinese
+# - name: DIETClassifier
+#   epochs: 100
+#   ranking_length: 0
+#   constrain_similarities: True
+#   use_masked_language_model: True
+# - name: EntitySynonymMapper
+# - name: ResponseSelector
+#   constrain_similarities: True
+#   epochs: 200
+# policies:
+#   - name: MemoizationPolicy
+#   - name: TEDPolicy
+#     max_history: 10
+#     epochs: 200
+#   - name: RulePolicy
+#     core_fallback_threshold: 0.3
+#     core_fallback_action_name: "action_default_fallback"
+
+
+recipe: default.v1
+
+language: zh
+pipeline:
+- name: SpacyNLP
+  model: zh_core_web_sm
+- name: JiebaTokenizer
+- name: LanguageModelFeaturizer
+  model_name: bert
+  model_weights: bert-base-chinese
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: "char_wb"
+  min_ngram: 1
+  max_ngram: 4
+- name: DIETClassifier
+  epochs: 100
+  ranking_length: 0
+  constrain_similarities: True
+  use_masked_language_model: False
+- name: EntitySynonymMapper
+- name: ResponseSelector
+  constrain_similarities: True
+  epochs: 200
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    max_history: 10
+    epochs: 200
+  - name: RulePolicy
+    core_fallback_threshold: 0.3
+    core_fallback_action_name: "action_default_fallback"

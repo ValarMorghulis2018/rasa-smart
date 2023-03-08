@@ -1,0 +1,27 @@
+version: "3.0"
+nlu:
+  - intent: check_mutations
+    examples: |
+      - [s2300004936](sampleid)，麻烦复核一下[EGFR](genesymbol)、[KIT](genesymbol)扩增，谢谢@ 李超
+      - [s2300004936](sampleid)，麻烦复核一下[EGFR](genesymbol)、[KIT](genesymbol)扩增。谢谢@ 李超
+      - [s2300004936](sampleid)，麻烦帮我复核一个[EGFR](genesymbol)、[KIT](genesymbol)扩增，谢谢@ 李超
+      - [s2300004936](sampleid)，李超复核[EGFR](genesymbol)扩增，这个怎么样
+      - [s2300004936](sampleid)，[EGFR](genesymbol)扩增，复核
+      - [s2300004936](sampleid)，同时检出[EGFR](genesymbol)和[BRAF](genesymbol)， [s2300004936](sampleid)，麻烦复核一下数据，谢谢
+      - [s2300004936](sampleid)，同时检出[EGFR](genesymbol)和[BRAF](genesymbol)， [s2300004936](sampleid)，麻烦复核一下数据，谢
+      - 同时检查[BRAF](genesymbol)和[EGFR](genesymbol),  [s2300004936](sampleid)，麻烦复核一下
+      - [EGFR](genesymbol)检查和[BRAF](genesymbol)检查哪个准确， [s2300004936](sampleid)，麻烦复核一下，谢谢！
+      - [s2300004936](sampleid)，[EGFR](genesymbol)检出，[BRAF](genesymbol)检查，请帮助复核一下谢谢
+      - [s2300004936](sampleid)，检出[EGFR](genesymbol)和[BRAF](genesymbol)，请问怎样复核，谢谢
+      - [BRAF](genesymbol)和[EGFR](genesymbol)同时检测， [s2300004936](sampleid)，怎么复核，谢谢
+      - [s2300004936](sampleid)，麻烦复核一下[BRAF](genesymbol)
+      - [s2300004936](sampleid)，[BRAF](genesymbol)结果，谢谢@ 李超
+      - [s2300004936](sampleid)，[BRAF](genesymbol)复核结果，谢谢。
+      - [s2300004936](sampleid)，[BRAF](genesymbol)复核结果，谢谢
+      - [s2300004936](sampleid)，肺癌[BRCA2](genesymbol)致病胚系突变
+      - [s2300004936](sampleid)，检出[BRCA2](genesymbol)致病胚系突变，请问好。
+      - [s2300004936](sampleid)，已确诊，昨天复核结果结果：[BRCA2](genesymbol)致病胚系突变
+      - [s2300004936](sampleid)，肺癌[BRCA2](genesymbol)致病胚系突变和xx有关吗
+      - [s2300004936](sampleid)，[BRCA2](genesymbol)致病胚系突变是什么意思
+      - [s2300004936](sampleid)，[BRCA2](genesymbol)致病胚系突变，各位大佬帮帮我
+      - [s2300004936](sampleid)，急！！！消化道肿瘤查到[EGFR](genesymbol) l858r

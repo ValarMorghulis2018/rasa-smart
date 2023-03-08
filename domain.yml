@@ -1,0 +1,60 @@
+version: "3.0"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - stop
+  - check_mutations
+  - check_more_mutations
+  - check_lung_low_mutations
+  - check_contamination_data
+  - check_lung_hot_mutations
+  - check_msi_result
+  - check_tmb_result
+entities:
+  - genesymbol
+  - sampleid
+slots:
+  sampleid:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: sampleid
+  genesymbol:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: genesymbol
+responses:
+  utter_greet:
+    - text: 你好，我是 Silly，我可以帮你查询时间、日期和星期几。你可以对我说「现在几点了？」、「今天几号？」或者「明天星期几？」。
+  utter_goodbye:
+    - text: 再见！
+  utter_ask_sampleid:
+    - text: 哪个样本编号？
+  utter_ask_genesymbol:
+    - text: 哪个基因？
+actions:
+  - utter_goodbye
+  - utter_greet
+  - action_check_mutations
+  - action_check_more_mutations
+  - action_check_lung_low_mutations
+  - action_check_contamination_data
+  - action_check_lung_hot_mutations
+  - action_check_msi_result
+  - action_check_tmb_result
+forms:
+  check_sampleid_genesymbol_form:
+    required_slots:
+      - sampleid
+      - genesymbol
+  check_sampleid_form:
+   required_slots:
+      - sampleid
